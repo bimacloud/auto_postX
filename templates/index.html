@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pilih Kategori</title>
+</head>
+<body>
+  <h1>Pilih Kategori</h1>
+  <ul>
+    {% for category in categories %}
+      <li><a href="{{ url_for('videos', category=category) }}">{{ category }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

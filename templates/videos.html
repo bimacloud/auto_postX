@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video List</title>
+</head>
+<body>
+  <h1>Daftar Video - {{ category }}</h1>
+  <ul>
+    {% for video in videos %}
+      <li>
+        <p>{{ video.title }}</p>
+        <img src="{{ video.poster_url }}" alt="{{ video.title }}" width="150"><br>
+        <a href="{{ url_for('download', category=category, video_id=video.id) }}">Download & Preview</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{{ url_for('index') }}">← Kembali</a>
+</body>
+</html>

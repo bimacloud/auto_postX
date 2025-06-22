@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ data.title }}</title>
+  <!-- Metadata untuk Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ data.title }}">
+  <meta name="twitter:description" content="{{ data.description }}">
+  <meta name="twitter:image" content="{{ data.image_url }}">
+</head>
+<body>
+  <h1>{{ data.title }}</h1>
+  <img src="{{ data.image_url }}" width="300" alt="{{ data.title }}">
+  <p>{{ data.description }}</p>
+  <a href="{{ url_for('index') }}">← Kembali ke Beranda</a>
+</body>
+</html>
